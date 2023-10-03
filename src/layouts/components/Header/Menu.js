@@ -1,4 +1,8 @@
+import React from "react";
+// import Tippy from "@tippy/react";
 import { NavLink } from "react-router-dom";
+
+import SubMenu from "./SubMenu.js";
 
 import { MdArrowDropDown } from "react-icons/md";
 
@@ -15,6 +19,7 @@ const MENU_ITEMS = [
     title: "Sản phẩm",
     icon: MdArrowDropDown,
     to: "/san-pham/tat-ca",
+    children: SubMenu,
   },
   {
     title: "Tin tức",
@@ -31,17 +36,22 @@ const MENU_ITEMS = [
 ];
 
 function Menu() {
-  const hoverStyle = " hover:text-[#cd9b32] hover:underline hover:underline-offset-8";
+  const hoverStyle =
+    " hover:text-[#cd9b32] hover:underline hover:underline-offset-8";
 
   return (
     <div className="menu flex flex-row items-center gap-x-10">
       {MENU_ITEMS.map((item) => {
         // if (item.icon) {
         //   return (
-        //     <div className={`menu-item flex items-center cursor-pointer ${hoverStyle}`}>
-        //       <p className="">{item.title}</p>
-        //       <item.icon className="text-2xl" />
-        //     </div>
+        //     <Tippy>
+        //       <div
+        //         className={`menu-item flex items-center cursor-pointer ${hoverStyle}`}
+        //       >
+        //         <p className="">{item.title}</p>
+        //         <item.icon className="text-2xl" />
+        //       </div>
+        //     </Tippy>
         //   );
         // } else {
           return (
@@ -54,10 +64,12 @@ function Menu() {
                   textUnderlineOffset: isPending ? "" : "8px",
                 };
               }}
-              className={`${item.icon ? "menu-item flex items-center cursor-pointer": ""} ${hoverStyle}`}
+              className={`${
+                item.icon ? "menu-item flex items-center cursor-pointer" : ""
+              } ${hoverStyle}`}
             >
               {item.title}
-              {item.icon && <item.icon/>}
+              {item.icon && <item.icon />}
             </NavLink>
           );
         // }
