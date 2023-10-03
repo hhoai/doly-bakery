@@ -1,10 +1,10 @@
 const routes = {
   home: '/',
-  introduce: '/gioi-thieu',
+  introduce: 'gioi-thieu',
   collections: 'san-pham/tat-ca',
   news: 'tin-tuc',
-  contact: '/lien-he',
-  stores: '/he-thong-cua-hang',
-  product: '/san-pham',
+  contact: 'lien-he',
+  stores: 'he-thong-cua-hang',
+  product: 'san-pham',
 }
 export default routes;

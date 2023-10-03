@@ -1,7 +1,11 @@
+import Policy from "./Policy.js";
+
+
+
 function Home() {
   return ( 
     <div className='wrapper'>
-      <h2>Home page</h2>
+      <Policy />
     </div>
       
    );

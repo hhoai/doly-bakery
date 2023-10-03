@@ -1,12 +1,12 @@
 import Header from '../components/Header/Header.js';
-import Sidebar from '../components/Sidebar/Sidebar.js';
+import HeroSection from '../components/HeroSection/HeroSection.js';
 import Footer from '../components/Footer/Footer.js';
 
 function DefaultLayout({children}) {
   return ( 
     <>
       <Header/>
-      <Sidebar/>
+      <HeroSection/>
       {children}
       <Footer/>
     </>
