@@ -1,0 +1,11 @@
+.item {
+  overflow: hidden;
+  border-radius: 6px;
+  .img {
+    transition: all .5s ease;
+    &:hover {
+      transform: scale(1.2);
+      width: 300px;
+    }
+  }
+}
