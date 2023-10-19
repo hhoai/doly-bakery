@@ -24,7 +24,7 @@ function Connection() {
       </p>
       <div className="flex gap-2">
         {COMMERCIAL_PLATFORMS.map((value) => (
-          <a href={value.href} target="_blank">
+          <a href={value.href} target="_blank" rel="noreferrer">
             <img
               src={value.img}
               alt={value.alt}
